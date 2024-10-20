@@ -1,0 +1,4 @@
+enum Matter {
+    GAZEUX,
+    SOLID
+}
