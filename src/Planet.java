@@ -1,9 +1,10 @@
 import java.util.Random;
 
 public class Planet {
-    String name;
-    Matter matter = Matter.SOLID;
-    long diameter;
+    private final Random random = new Random();
+    private final String name;
+    private final Matter matter;
+    private final long diameter;
 
     public Planet() {
         // Constructeur pour initialiser la planète avec des valeurs générées
@@ -15,7 +16,6 @@ public class Planet {
     private String generateName() {
         // Liste de syllabes pour générer des noms de planètes
         String[] syllables = {"Zor", "xan", "mar", "tor", "ze", "dil", "tar", "lon", "vak", "nim", "rax", "pol", "fir", "ul", "om", "qua", "ryn"};
-        Random random = new Random();
 
         // Générer un nom avec 2 à 4 syllabes
         int numSyllables = 2 + random.nextInt(3);  // Entre 2 et 4 syllabes
@@ -33,13 +33,11 @@ public class Planet {
     private Matter generateMatter() {
         // Retourner une matière aléatoire (exemple : SOLID, GAS, LIQUID)
         Matter[] matters = Matter.values();
-        Random random = new Random();
         return matters[random.nextInt(matters.length)];
     }
 
     private long generateDiameter() {
         // Retourner un diamètre aléatoire (par exemple entre 1000 et 100000 km)
-        Random random = new Random();
         return 1000 + random.nextInt(100000);
     }
 
