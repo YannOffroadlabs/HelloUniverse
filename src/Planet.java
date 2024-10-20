@@ -31,7 +31,6 @@ public class Planet {
 
 
     private Matter generateMatter() {
-        // Retourner une matière aléatoire (exemple : SOLID, GAS, LIQUID)
         Matter[] matters = Matter.values();
         return matters[random.nextInt(matters.length)];
     }
@@ -45,7 +44,7 @@ public class Planet {
         // Afficher les informations de la planète
         System.out.println("Découverte d'une nouvelle planète !");
         System.out.println("Nom : " + name);
-        System.out.println("Matière : " + matter);
+        System.out.println("Matière : " + matter.name);
         System.out.println("Diamètre : " + diameter + " km");
     }
 }
