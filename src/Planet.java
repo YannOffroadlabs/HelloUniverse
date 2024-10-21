@@ -15,7 +15,7 @@ public class Planet {
 
     private String generateName() {
         // Liste de syllabes pour générer des noms de planètes
-        String[] syllables = {"Zor", "xan", "mar", "tor", "ze", "dil", "tar", "lon", "vak", "nim", "rax", "pol", "fir", "ul", "om", "qua", "ryn"};
+        String[] syllables = {"zor", "xan", "mar", "tor", "ze", "dil", "tar", "lon", "vak", "nim", "rax", "pol", "fir", "ul", "om", "qua", "ryn"};
 
         // Générer un nom avec 2 à 4 syllabes
         int numSyllables = 2 + random.nextInt(3);  // Entre 2 et 4 syllabes
